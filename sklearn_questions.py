@@ -69,8 +69,6 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
         self.n_neighbors = n_neighbors
 
     def fit(self, X, y):
-
-        X = validate_data(self, X, )
         """Fitting function.
 
         Parameters
@@ -224,7 +222,6 @@ class MonthlySplit(BaseCrossValidator):
         idx_test : ndarray
             The testing set indices for that split.
         """
-
         if self.time_col == "index":
             t = X.index
         else:
